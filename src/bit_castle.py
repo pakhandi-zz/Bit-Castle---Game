@@ -173,11 +173,9 @@ def start_level(nlevel):
 
 	clock = pygame.time.Clock()
 
-	img = pygame.image.load('snakeHead.png')
 	batterypic = pygame.image.load('battery.png')
 	killpic = pygame.image.load('kill.png')
 	gatepic = pygame.image.load('door.png')
-	brickpic = pygame.image.load('brick.png')
 	bigbatterypic = pygame.image.load('bigbattery.png')
 	keypic = pygame.image.load('key.png')
 	coinpic = pygame.image.load('coin.png')
