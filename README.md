@@ -1,4 +1,4 @@
-# Bit-Castle---Game (UNDER DEVELOPMENT)
+# Bit-Castle---Game (V-1.0.0)
 A Python (PyGame) based basic game
 
 This is a simple game made using Python-2.7.9 (32-bit), PyGame and Tkinter. The application is for Windows System only.
