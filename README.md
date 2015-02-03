@@ -50,6 +50,9 @@ This is a simple game made using Python-2.7.9 (32-bit), PyGame and Tkinter. The 
 <h3>Testing</h3>
 The program has been tested on Windows-8.1(64-bit) and Windows-8.0(64-bit)..
 
+<h3>Working</h3>
+The working of the application is explained <a href="http://bugecode.com/post.php?pid=114">here</a>.
+
 <span>For Hugs & Bugs, drop a mail at <b>asimkprasad@gmail.com</b></span>
 
 
