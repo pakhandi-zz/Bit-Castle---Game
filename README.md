@@ -33,8 +33,6 @@ This is a simple game made using Python-2.7.9 (32-bit), PyGame and Tkinter. The 
 <ul>
 <li>64-bit Windows System</li>
 <li>Internet Connection</li>
-=======
->>>>>>> origin/master
 </ul>
 
 <h3>Execution : </h3>
