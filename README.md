@@ -29,6 +29,15 @@ This is a simple game made using Python-2.7.9 (32-bit), PyGame and Tkinter. The 
 </li>
 </ul>
 
+<h3>Windows Smart Screen</h3>
+To run the <b>bit_castle.exe</b> file you may need to bypass windows smartscreen warning.
+<br>
+<br>
+<img src="https://raw.githubusercontent.com/pakhandi/Bit-Castle---Game/master/dist/win1.png">
+<br>
+<img src="https://raw.githubusercontent.com/pakhandi/Bit-Castle---Game/master/dist/win2.png">
+<br>
+
 <h3>Requisites</h3>
 <ul>
 <li>64-bit Windows System</li>
