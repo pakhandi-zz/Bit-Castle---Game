@@ -37,7 +37,7 @@ This is a simple game made using Python-2.7.9 (32-bit), PyGame and Tkinter. The 
 
 <h3>Execution : </h3>
 <ul>
-<li> Download all the files from <a href="https://github.com/pakhandi/Bit-Castle---Game">here</a>.</li>
+<li> Download all the files from <a href="https://github.com/pakhandi/Bit-Castle---Game/archive/V-2.0.0.zip">here</a>.</li>
 <li> Execute the <b>bit_castle.exe</b> file in the <b>dist</b> folder </li>
 <li> If you are working behind proxy
 	<ul>
