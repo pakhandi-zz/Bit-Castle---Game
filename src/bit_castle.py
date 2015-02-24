@@ -2,6 +2,8 @@ import pygame
 import sys
 import random
 from Tkinter import *
+import urllib, urllib2
+import webbrowser
 
 pygame.init()
 pygame.display.init()
@@ -53,6 +55,9 @@ global EXTRA_CHARGE
 EXTRA_CHARGE = 0
 
 global INITIAL_CHARGE, NEW_RECHARGE, CLOCK_TICK
+global CURR_LEVEL
+global PROXY_AUTH
+global open_browser
 
 def init_game():
 	global DELAY, EXTRA_CHARGE, curr_score
@@ -80,7 +85,7 @@ def rules():
 	while isrunning:
 		event = pygame.event.poll()
 		if event.type == pygame.QUIT:
-			sys.exit(0)
+			exit()
 		if event.type == pygame.KEYDOWN:
 			if event.key == pygame.K_r:
 				isrunning = False
@@ -89,16 +94,16 @@ def rules():
 		screen1.blit(font2.render("Rules & Controls", True, green), (380,50))
 		screen1.blit(font1.render("Press R to Return",True, (0,0,0)), (420,100))
 		screen1.blit(font1.render("1>  Goal of the game is to reach the door in each level.", True, (0,0,0)), ( 10 , 140 ))
-		screen1.blit(font1.render("2>  Each level is completed only when the player reaches the gate with the Key.", True, (0,0,0)), ( 10 , 170 ))
+		screen1.blit(font1.render("2>  Each level is completed only when the player REACHES THE GATE WITH THE KEY.", True, (0,0,0)), ( 10 , 170 ))
 		screen1.blit(font1.render("3>  Without taking the key, the level won't be over.", True, (0,0,0)), ( 10 , 200 ))
 		screen1.blit(font1.render("4>  You have got a torch, it'll make it possible for you to see the objects in a level.", True, (0,0,0)), ( 10 , 230 ))
-		screen1.blit(font1.render("5>  The torch can be turned OFF or ON using Space-Bar.", True, (0,0,0)), ( 10 , 260 ))
+		screen1.blit(font1.render("5>  The torch can be turned OFF or ON using SPACE-BAR and cursor is moved using ARROW-KEYS", True, (0,0,0)), ( 10 , 260 ))
 		screen1.blit(font1.render("6>  When the torch is OFF, you can only see yourself and nothing else.", True, (0,0,0)), ( 10 , 290 ))
 		screen1.blit(font1.render("7>  If the battery of the torch runs out, the torch is put-off automatically.", True, (0,0,0)), ( 10 , 320 ))
 		screen1.blit(font1.render("8>  If you decide to put OFF the torch, the torch can be put back ON after a certain amout of time ONLY.", True, (0,0,0)), ( 10 , 350 ))
 		screen1.blit(font1.render("9>  There are some 'red' colored crosses, touching them will kill you instantaneously.", True, (0,0,0)), ( 10 , 380 ))
 		screen1.blit(font1.render("10>  There are some 'green' colored batteries, touching them will recharge your torch batteries a little.", True, (0,0,0)), ( 10 , 410 ))
-		screen1.blit(font1.render("11>  You have to reach the gate in a certain amount of time, else the Game Is Over.", True, (0,0,0)), ( 10 , 440 ))
+		screen1.blit(font1.render("11>  You have to REACH THE GATE IN A CERTAIN AMOUNT OF TIME, else the Game Is Over.", True, (0,0,0)), ( 10 , 440 ))
 		screen1.blit(font1.render("12>  After every level, you can visit the store and buy some boosts to help you in coming levels.", True, (0,0,0)), ( 10 , 470 ))
 		screen1.blit(font1.render("13>  The left-over battery charge will be converted to coins at the end of any level.", True, (0,0,0)), ( 10 , 500 ))
 		screen1.blit(font1.render("14>  Press Z to PAUSE.", True, (0,0,0)), ( 10 , 530 ))
@@ -108,6 +113,9 @@ def rules():
 		screen1.blit(font1.render("Death", True, (0,0,0)), (30, 580))
 		screen1.blit(batterypic, (10, 610))
 		screen1.blit(font1.render("Recharge", True, (0,0,0)), (30, 600))
+		screen1.blit(keypic, (10, 630))
+		screen1.blit(font1.render("KEY", True, (0,0,0)), (30, 620))
+		screen1.blit(font1.render("Press R to Return",True, (0,0,0)), (420,640))
 		pygame.display.update()
 				
 		
@@ -118,9 +126,11 @@ def start_Screen():
 	while isrunning:
 		for event in pygame.event.get():
 			if event.type == pygame.QUIT:
-				sys.exit(0)
+				print "Quit"
+				exit()
 			if event.type == pygame.KEYDOWN:
 				if event.key == pygame.K_p:
+					getusername()
 					screen.fill(background_color)
 					return
 				if event.key == pygame.K_r:
@@ -128,10 +138,10 @@ def start_Screen():
 		screen = pygame.display.set_mode((width, height))
 		font1 = pygame.font.SysFont('comicsansms', 15)
 		font2 = pygame.font.SysFont('comicsansms', 30)
-		pygame.display.set_caption("Bit Castle V-1.0.0")
+		pygame.display.set_caption("Bit Castle V-2.1.0")
 		screen.fill(background_color)
 		screen.blit(font2.render( "Bit Castle", True, green ), (35,100) )
-		screen.blit(font1.render( "V-1.0.0", True, (37,14,182)) , (80, 140) )
+		screen.blit(font1.render( "V-2.1.0", True, (37,14,182)) , (80, 140) )
 		screen.blit(font1.render( "Press P to Play",True, (0,0,0)), (50,200))
 		screen.blit(font1.render( "Press R for Rules & Controls",True, (0,0,0)), (2,250))
 		screen.blit(font1.render( "By -- Asim Krishna Prasad",True, (0,0,0)), (10,320))
@@ -154,12 +164,12 @@ def pause_Screen(curr_score):
 	while isrunning:
 		for event in pygame.event.get():
 			if event.type == pygame.QUIT:
-				sys.exit(0)
+				exit()
 			if event.type == pygame.KEYDOWN:
 				if event.key == pygame.K_p or event.key == pygame.K_z:
 					return
 				if event.key == pygame.K_q:
-					sys.exit(0)
+					exit()
 
 global PLAYER,  entry2, input2
 
@@ -196,20 +206,23 @@ def getusername():
 
 	input2 = StringVar()
 	entry2 = Entry(w1, textvariable = input2)
-	btndec = Button(w1, text="Submit", command=lambda : get_log_var(w1))
+	btndec = Button(w1, text="Press enter to Submit", command=lambda : get_log_var(w1))
 	
 	#btndec['get_log_var(w1)'] = w1.destroy()
-	entry2.grid(row=4, column=7 )
+	entry2.grid(row=4, column=5 )
 	btndec.grid(row=5, column=5)
 	entry2.bind("<Return>", get_log_var2)
 	entry2.focus_set()
 	w1.mainloop()
 
 def gameover_Screen():
+	global PROXY_AUTH
 	global curr_score
 	global DELAY
 	global EXTRA_CHARGE
 	global PLAYER
+	global CURR_LEVEL
+	global open_browser
 
 	length = len(PLAYER)
 	length = length * 13
@@ -222,18 +235,49 @@ def gameover_Screen():
 	font3 = pygame.font.SysFont('comicsansms', 20)
 	pygame.display.set_caption("Bit Castle")
 	screen.fill(background_color)
-	
+
+	try_proxy=0
+	proxy_failed=0
+
+	try:
+		#HighScore Uploader : Direct Internet Connection
+
+	except urllib2.URLError, e:
+		print "Error in direct connection to internet"
+		try_proxy=1
+
+	if try_proxy == 1:	
+		try:
+			print "Trying proxy given in proxy.txt : "+PROXY_AUTH
+			#HighSCore Uploader : Proxy Connection
+
+		except urllib2.URLError, e:
+			print "Error in Proxy Connection"
+			proxy_failed=1
+        
+	if proxy_failed==1:
+		print "HighScore not uploaded..Make sure you are connected to internet"
+
+
 	pygame.display.flip()
 	isrunning = True
+
+	
+	if open_browser == 1 :
+		temp=2
+		url="http://bugecode.com/bitcastle#"+PLAYER.upper()
+		webbrowser.open(url,temp==temp)
+	open_browser=0
+
 	while isrunning:
 		for event in pygame.event.get():
 			if event.type == pygame.QUIT:
-				sys.exit(0)
+				exit()
 			if event.type == pygame.KEYDOWN:
 				if event.key == pygame.K_p or event.key == pygame.K_z:
 					return
 				if event.key == pygame.K_q:
-					sys.exit(0)
+					exit()
 		screen.fill(background_color)
 		screen.blit(font2.render("Bit Castle", True, green), (148,100))
 		screen.blit(font2.render("Congrats", True, (37,14,182)), (150, 150))
@@ -243,11 +287,14 @@ def gameover_Screen():
 		screen.blit(font1.render(str(curr_score), True, (0,0,0)), (210,260))
 		
 		screen.blit(font1.render("Take a snapshot and share it on fb.com/bugecode", True, (0,0,0)), (25, 300))
-		screen.blit(font1.render("Press Z to Start Again", True, (0,0,0)), (140, 350))
+		screen.blit(font1.render("Check the LeaderBoard on - http://goo.gl/UlZNah", True, (0,0,0)), (25, 340))
+		screen.blit(font1.render("Press Z to Start Again", True, (0,0,0)), (140, 380))
 		pygame.display.update()
 
-
 def start_level(nlevel):
+
+	global CURR_LEVEL
+	CURR_LEVEL = nlevel
 
 	if nlevel >= 10:
 		ind = 10
@@ -338,12 +385,16 @@ def start_level(nlevel):
 
 	clock = pygame.time.Clock()
 
+
+
 	batterypic = pygame.image.load('battery.png')
 	killpic = pygame.image.load('kill.png')
 	gatepic = pygame.image.load('door.png')
 	bigbatterypic = pygame.image.load('bigbattery.png')
 	keypic = pygame.image.load('key.png')
 	coinpic = pygame.image.load('coin.png')
+
+	
 
 	for i in range(600):
 		if i%100==0 and DEATHS<MAX_DEATHS:
@@ -407,7 +458,7 @@ def start_level(nlevel):
 		for event in pygame.event.get():
 			if event.type == pygame.QUIT:
 				isrunning = False
-				sys.exit(0)
+				exit()
 			if event.type == pygame.KEYDOWN:
 				if event.key == pygame.K_z:
 					pause_Screen(curr_score)
@@ -535,10 +586,10 @@ def start_level(nlevel):
 			doexit = True
 
 		if curr_time > dead_time_array[ind]:
-			isdead = True
+			isdead = False
 
 		if isdead:
-			getusername()
+			#getusername()
 			gameover_Screen()
 			main()
 			#start_Screen()
@@ -581,7 +632,7 @@ def start_level(nlevel):
 			#pygame.display.update()
 			
 		else:
-			battery=battery-1
+			battery=battery
 			screen.fill(background_color)
 
 			for i in range(WALLS):
@@ -643,12 +694,12 @@ def store():
 	while isrunning:
 		for event in pygame.event.get():
 			if event.type == pygame.QUIT:
-				sys.exit(0)
+				exit()
 			if event.type == pygame.KEYDOWN:
 				if event.key == pygame.K_p or event.key == pygame.K_z:
 					return
 				if event.key == pygame.K_q:
-					sys.exit(0)
+					exit()
 				if curr_score >= 1200:
 					if event.key == pygame.K_1:
 						curr_score-=1200
@@ -698,12 +749,16 @@ def store():
 
 
 def main():
-	#getusername()
-	#gameover_Screen()
 	start_Screen()
 	for i in range(100):
 		start_level(i)
 		store()
 
 if __name__ == "__main__":
+	global open_browser
+	open_browser = 1
+	fo = open("proxy.txt", "r+")
+	global PROXY_AUTH
+	PROXY_AUTH = fo.read(100);
+	fo.close()
 	main()
