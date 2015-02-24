@@ -1,21 +1,33 @@
-# Bit-Castle---Game (V-2.0.0)
+# Bit-Castle---Game (V-2.1.0)
 A Python (PyGame) based basic game
 
 This is a simple game made using Python-2.7.9 (32-bit), PyGame and Tkinter. The application is for Windows System only.
 
-<h3>Rules & Controls: </h3>
+<h3>INDEX</h3>
+<ol>
+<li><a href="#rulesandcontrols">Rules & Controls</a></li>
+<li><a href="#windowssmartscreen">Windows Smart-Screen</a></li>
+<li><a href="#requisites">Requisites</a></li>
+<li><a href="#fixes">Fixes</a></li>
+<li><a href="#execution">Execution</a></li>
+<li><a href="#technologyused">Technology Used</a></li>
+<li><a href="#testing">Testing</a></li>
+<li><a href="#working">Working</a></li>
+</ol>
+
+<a name="rulesandcontrols"><h3>Rules & Controls: </h3></a>
 <ul>
 <li>Goal of the game is to reach the door in each level.</li>
-<li>Each level is completed only when the player reaches the gate with the Key.</li>
+<li>Each level is completed only when the player REACHES THE GATE WITH THE KEY.</li>
 <li>Without taking the key, the level won't be over.</li>
 <li>You have got a torch, it'll make it possible for you to see the objects in a level.</li>
-<li>The torch can be turned OFF or ON using Space-Bar.</li>
+<li>The torch can be turned OFF or ON using SPACE-BAR and cursor is moved using ARROW-KEYS.</li>
 <li>When the torch is OFF, you can only see yourself and nothing else.</li>
 <li>If the battery of the torch runs out, the torch is put-off automatically.</li>
 <li>If you decide to put OFF the torch, the torch can be put back ON after a certain amout of time ONLY.</li>
 <li>There are some 'red' colored crosses, touching them will kill you instantaneously.</li>
 <li>There are some 'green' colored batteries, touching them will recharge your torch batteries a little.</li>
-<li>You have to reach the gate in a certain amount of time, else the Game Is Over.</li>
+<li>You have to REACH THE GATE IN A CERTAIN AMOUNT OF TIME, else the Game Is Over.</li>
 <li>After every level, you can visit the store and buy some boosts to help you in coming levels.</li>
 <li>The left-over battery charge will be converted to coins at the end of any level.</li>
 <li>Press Z to PAUSE.</li>
@@ -29,7 +41,7 @@ This is a simple game made using Python-2.7.9 (32-bit), PyGame and Tkinter. The 
 </li>
 </ul>
 
-<h3>Windows Smart Screen</h3>
+<a name="windowssmartscreen"><h3>Windows Smart Screen</h3></a>
 To run the <b>bit_castle.exe</b> file you may need to bypass windows smartscreen warning.
 <br>
 <br>
@@ -38,15 +50,21 @@ To run the <b>bit_castle.exe</b> file you may need to bypass windows smartscreen
 <img src="https://raw.githubusercontent.com/pakhandi/Bit-Castle---Game/master/dist/win2.png">
 <br>
 
-<h3>Requisites</h3>
+<a name="requisites"><h3>Requisites</h3></a>
 <ul>
 <li>64-bit Windows System</li>
 <li>Internet Connection</li>
 </ul>
 
-<h3>Execution : </h3>
+<a name="fixes"><h3>Fixes</h3></a>
 <ul>
-<li> Download all the files from <a href="https://github.com/pakhandi/Bit-Castle---Game/archive/V-2.0.0.zip">here</a>.</li>
+<li>Supports proxy connection for leaderboard updation (<b>dist/proxy.txt</b>)</li>
+<li>Fixed png-chunk-length error</li>
+</ul>
+
+<a name="execution"><h3>Execution : </h3></a>
+<ul>
+<li> Download all the files from <a href="https://github.com/pakhandi/Bit-Castle---Game/archive/V-2.1.0.zip">here</a>.</li>
 <li> Execute the <b>bit_castle.exe</b> file in the <b>dist</b> folder </li>
 <li> If you are working behind proxy
 	<ul>
@@ -60,17 +78,17 @@ To run the <b>bit_castle.exe</b> file you may need to bypass windows smartscreen
 <li> Execute the <b>bitcastle.exe</b> file in the <b>dist</b> folder </li>
 </ul>
 
-<h3>Technology Used</h3>
+<a name="technologyused"><h3>Technology Used</h3></a>
 <ul>
 <li>The game is made in Python-2.7.9</li>
 <li>Pygame and Tkinter libraries</li>
 <li>Executables were made using <b>py2exe</b></li>
 </ul>
 
-<h3>Testing</h3>
+<a name="testing"><h3>Testing</h3></a>
 The program has been tested on Windows-8.1(64-bit) and Windows-8.0(64-bit)..
 
-<h3>Working</h3>
+<a name="working"><h3>Working</h3></a>
 When the Torch is ON : <br><br>
 <img src="https://raw.githubusercontent.com/pakhandi/Bit-Castle---Game/master/dist/bitcastle_tut1.JPG">
 <br>
