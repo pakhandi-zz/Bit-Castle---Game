@@ -15,7 +15,7 @@ This is a simple game made using Python-2.7.9 (32-bit), PyGame and Tkinter. The 
 <li><a href="#working">Working</a></li>
 </ol>
 
-<a name="rulesandcontrols"><h3>Rules & Controls: </h3></a>
+<a name="rulesandcontrols"><h3>1. Rules & Controls: </h3></a>
 <ul>
 <li>Goal of the game is to reach the door in each level.</li>
 <li>Each level is completed only when the player REACHES THE GATE WITH THE KEY.</li>
@@ -41,7 +41,7 @@ This is a simple game made using Python-2.7.9 (32-bit), PyGame and Tkinter. The 
 </li>
 </ul>
 
-<a name="windowssmartscreen"><h3>Windows Smart Screen</h3></a>
+<a name="windowssmartscreen"><h3>2. Windows Smart Screen</h3></a>
 To run the <b>bit_castle.exe</b> file you may need to bypass windows smartscreen warning.
 <br>
 <br>
@@ -50,19 +50,19 @@ To run the <b>bit_castle.exe</b> file you may need to bypass windows smartscreen
 <img src="https://raw.githubusercontent.com/pakhandi/Bit-Castle---Game/master/dist/win2.png">
 <br>
 
-<a name="requisites"><h3>Requisites</h3></a>
+<a name="requisites"><h3>3. Requisites</h3></a>
 <ul>
 <li>64-bit Windows System</li>
 <li>Internet Connection</li>
 </ul>
 
-<a name="fixes"><h3>Fixes</h3></a>
+<a name="fixes"><h3>4. Fixes</h3></a>
 <ul>
 <li>Supports proxy connection for leaderboard updation (<b>dist/proxy.txt</b>)</li>
 <li>Fixed png-chunk-length error</li>
 </ul>
 
-<a name="execution"><h3>Execution : </h3></a>
+<a name="execution"><h3>5. Execution : </h3></a>
 <ul>
 <li> Download all the files from <a href="https://github.com/pakhandi/Bit-Castle---Game/archive/V-2.1.0.zip">here</a>.</li>
 <li> Execute the <b>bit_castle.exe</b> file in the <b>dist</b> folder </li>
@@ -78,17 +78,17 @@ To run the <b>bit_castle.exe</b> file you may need to bypass windows smartscreen
 <li> Execute the <b>bitcastle.exe</b> file in the <b>dist</b> folder </li>
 </ul>
 
-<a name="technologyused"><h3>Technology Used</h3></a>
+<a name="technologyused"><h3>6. Technology Used</h3></a>
 <ul>
 <li>The game is made in Python-2.7.9</li>
 <li>Pygame and Tkinter libraries</li>
 <li>Executables were made using <b>py2exe</b></li>
 </ul>
 
-<a name="testing"><h3>Testing</h3></a>
+<a name="testing"><h3>7. Testing</h3></a>
 The program has been tested on Windows-8.1(64-bit) and Windows-8.0(64-bit)..
 
-<a name="working"><h3>Working</h3></a>
+<a name="working"><h3>8. Working</h3></a>
 When the Torch is ON : <br><br>
 <img src="https://raw.githubusercontent.com/pakhandi/Bit-Castle---Game/master/dist/bitcastle_tut1.JPG">
 <br>
@@ -97,7 +97,7 @@ When the Torch is OFF : <br><br>
 <img src="https://raw.githubusercontent.com/pakhandi/Bit-Castle---Game/master/dist/bitcastle_tut2.JPG">
 <br>
 <br>
-The working of the application is explained <a href="http://bugecode.com/post.php?pid=114">here</a>.
+The working of the application is explained <a href="http://bugecode.com/post.php?pid=116">here</a>.
 
 <span>For Hugs & Bugs, drop a mail at <b>asimkprasad@gmail.com</b></span>
 
