@@ -9,10 +9,10 @@ This is a simple game made using Python-2.7.9 (32-bit), PyGame and Tkinter. The 
 <li><a href="#windowssmartscreen">Windows Smart-Screen</a></li>
 <li><a href="#requisites">Requisites</a></li>
 <li><a href="#fixes">Fixes</a></li>
-<li><a href="#execution">Execution</a></li>
+<li><a href="#execution">Installation & Execution</a></li>
 <li><a href="#technologyused">Technology Used</a></li>
 <li><a href="#testing">Testing</a></li>
-<li><a href="#working">Working</a></li>
+<li><a href="#working">Working & GamePlay-Video</a></li>
 </ol>
 
 <a name="rulesandcontrols"><h3>1. Rules & Controls: </h3></a>
@@ -89,6 +89,7 @@ To run the <b>bit_castle.exe</b> file you may need to bypass windows smartscreen
 The program has been tested on Windows-8.1(64-bit) and Windows-8.0(64-bit)..
 
 <a name="working"><h3>8. Working</h3></a>
+<a href="http://youtu.be/DigNsQLW4J8">GamePlay - Video</a><br>
 When the Torch is ON : <br><br>
 <img src="https://raw.githubusercontent.com/pakhandi/Bit-Castle---Game/master/dist/bitcastle_tut1.JPG">
 <br>
@@ -98,6 +99,7 @@ When the Torch is OFF : <br><br>
 <br>
 <br>
 The working of the application is explained <a href="http://bugecode.com/post.php?pid=116">here</a>.
+<br>
 
 <span>For Hugs & Bugs, drop a mail at <b>asimkprasad@gmail.com</b></span>
 
