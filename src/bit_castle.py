@@ -240,6 +240,7 @@ def gameover_Screen():
 	proxy_failed=0
 
 	try:
+		print "Trying direct connection"
 		#HighScore Uploader : Direct Internet Connection
 
 	except urllib2.URLError, e:
@@ -586,8 +587,7 @@ def start_level(nlevel):
 			doexit = True
 
 		if curr_time > dead_time_array[ind]:
-			isdead = False
-
+			isdead = True
 		if isdead:
 			#getusername()
 			gameover_Screen()
@@ -632,7 +632,7 @@ def start_level(nlevel):
 			#pygame.display.update()
 			
 		else:
-			battery=battery
+			battery=battery-1
 			screen.fill(background_color)
 
 			for i in range(WALLS):
