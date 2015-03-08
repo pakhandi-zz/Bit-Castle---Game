@@ -1,4 +1,4 @@
-# Bit-Castle---Game (V-2.2.4)
+<h3>Bit-Castle---Game (V-2.2.5)</h3>
 A Python (PyGame) based basic game
 
 This is a simple game made using Python-2.7.9 (32-bit), PyGame and Tkinter. The application is for Windows System only.
@@ -19,7 +19,7 @@ This is a simple game made using Python-2.7.9 (32-bit), PyGame and Tkinter. The 
 <ul>
 <li>Goal of the game is to reach the door in each level.</li>
 <li>Each level is completed only when the player REACHES THE GATE WITH THE KEY.</li>
-<li>Without taking the key, the level won't be over.</li>
+<li>THE MORE BATTERY YOU SAVE, THE MORE YOU SCORE.</li>
 <li>You have got a torch, it'll make it possible for you to see the objects in a level.</li>
 <li>The torch can be turned OFF or ON using SPACE-BAR and cursor is moved using ARROW-KEYS.</li>
 <li>When the torch is OFF, you can only see yourself and nothing else.</li>
@@ -64,7 +64,7 @@ To run the <b>bit_castle.exe</b> file you may need to bypass windows smartscreen
 
 <a name="execution"><h3>5. Execution : </h3></a>
 <ul>
-<li> Download all the files from <a href="https://github.com/pakhandi/Bit-Castle---Game/archive/V-2.2.4.zip">here</a>.</li>
+<li> Download all the files from <a href="https://github.com/pakhandi/Bit-Castle---Game/archive/V-2.2.5.zip">here</a>.</li>
 <li> Execute the <b>bit_castle.exe</b> file in the <b>dist</b> folder </li>
 <li> If you are working behind proxy
 	<ul>
@@ -102,7 +102,3 @@ The working of the application is explained <a href="http://bugecode.com/post.ph
 <br>
 
 <span>For Hugs & Bugs, drop a mail at <b>asimkprasad@gmail.com</b></span>
-
-
-
-
