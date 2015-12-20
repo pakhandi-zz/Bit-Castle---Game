@@ -1,0 +1,200 @@
+<!doctype html>
+<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
+<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on https://github.com/jonrohan -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen">
+  <link rel="stylesheet" href="stylesheets/github-dark.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/script.js"></script>
+
+  <title>Bit-castle---game</title>
+  <meta name="description" content="A Python (PyGame) based basic game">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header>
+      <h1 class="title">Bit-castle---game</h1>
+    </header>
+    <div id="container">
+      <p class="tagline">A Python (PyGame) based basic game</p>
+      <div id="main" role="main">
+        <div class="download-bar">
+        <div class="inner">
+          <a href="https://github.com/pakhandi/Bit-Castle---Game/tarball/master" class="download-button tar"><span>Download</span></a>
+          <a href="https://github.com/pakhandi/Bit-Castle---Game/zipball/master" class="download-button zip"><span>Download</span></a>
+          <a href="https://github.com/pakhandi/Bit-Castle---Game" class="code">View Bit-castle---game on GitHub</a>
+        </div>
+        <span class="blc"></span><span class="trc"></span>
+        </div>
+        <article class="markdown-body">
+          <h3>
+<a id="bit-castle---game-v-225" class="anchor" href="#bit-castle---game-v-225" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bit-Castle---Game (V-2.2.5)</h3>
+
+<p>A Python (PyGame) based basic game</p>
+
+<p>This is a simple game made using Python-2.7.9 (32-bit), PyGame and Tkinter. The application is for Windows System only.</p>
+
+<h3>
+<a id="index" class="anchor" href="#index" aria-hidden="true"><span class="octicon octicon-link"></span></a>INDEX</h3>
+
+<ol>
+<li><a href="#rulesandcontrols">Rules &amp; Controls</a></li>
+<li><a href="#windowssmartscreen">Windows Smart-Screen</a></li>
+<li><a href="#requisites">Requisites</a></li>
+<li><a href="#fixes">Fixes</a></li>
+<li><a href="#execution">Installation &amp; Execution</a></li>
+<li><a href="#technologyused">Technology Used</a></li>
+<li><a href="#testing">Testing</a></li>
+<li><a href="#working">Working &amp; GamePlay-Video</a></li>
+</ol>
+
+<p><a name="rulesandcontrols"><h3>
+<a id="1-rules--controls-" class="anchor" href="#1-rules--controls-" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Rules &amp; Controls: </h3></a></p>
+
+<ul>
+<li>Goal of the game is to reach the door in each level.</li>
+<li>Each level is completed only when the player REACHES THE GATE WITH THE KEY.</li>
+<li>THE MORE BATTERY YOU SAVE, THE MORE YOU SCORE.</li>
+<li>You have got a torch, it'll make it possible for you to see the objects in a level.</li>
+<li>The torch can be turned OFF or ON using SPACE-BAR and cursor is moved using ARROW-KEYS.</li>
+<li>When the torch is OFF, you can only see yourself and nothing else.</li>
+<li>If the battery of the torch runs out, the torch is put-off automatically.</li>
+<li>If you decide to put OFF the torch, the torch can be put back ON after a certain amout of time ONLY.</li>
+<li>There are some 'red' colored crosses, touching them will kill you instantaneously.</li>
+<li>There are some 'green' colored batteries, touching them will recharge your torch batteries a little.</li>
+<li>You have to REACH THE GATE IN A CERTAIN AMOUNT OF TIME, else the Game Is Over.</li>
+<li>After every level, you can visit the store and buy some boosts to help you in coming levels.</li>
+<li>The left-over battery charge will be converted to coins at the end of any level.</li>
+<li>Press Z to PAUSE.</li>
+<li> Images used : 
+<ul>
+  <li>
+<img src="https://raw.githubusercontent.com/pakhandi/Bit-Castle---Game/master/src/door.png"> --&gt; Door </li>
+  <li>
+<img src="https://raw.githubusercontent.com/pakhandi/Bit-Castle---Game/master/src/key.png"> --&gt; Key </li>
+  <li>
+<img src="https://raw.githubusercontent.com/pakhandi/Bit-Castle---Game/master/src/battery.PNG"> --&gt; Recharge </li>
+  <li>
+<img src="https://raw.githubusercontent.com/pakhandi/Bit-Castle---Game/master/src/kill.png"> --&gt; Death</li>
+</ul>
+
+<p></p>
+</li>
+</ul>
+
+<p><a name="windowssmartscreen"><h3>
+<a id="2-windows-smart-screen" class="anchor" href="#2-windows-smart-screen" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Windows Smart Screen</h3></a>
+To run the <b>bit_castle.exe</b> file you may need to bypass windows smartscreen warning.
+<br>
+<br>
+<img src="https://raw.githubusercontent.com/pakhandi/Bit-Castle---Game/master/dist/win1.png">
+<br>
+<img src="https://raw.githubusercontent.com/pakhandi/Bit-Castle---Game/master/dist/win2.png">
+<br></p>
+
+<p><a name="requisites"><h3>
+<a id="3-requisites" class="anchor" href="#3-requisites" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. Requisites</h3></a></p>
+
+<ul>
+<li>64-bit Windows System</li>
+<li>Internet Connection</li>
+</ul>
+
+<p><a name="fixes"><h3>
+<a id="4-fixes" class="anchor" href="#4-fixes" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. Fixes</h3></a></p>
+
+<ul>
+<li>Supports proxy connection for leaderboard updation (<b>dist/proxy.txt</b>)</li>
+<li>Fixed png-chunk-length error</li>
+</ul>
+
+<p><a name="execution"><h3>
+<a id="5-execution--" class="anchor" href="#5-execution--" aria-hidden="true"><span class="octicon octicon-link"></span></a>5. Execution : </h3></a></p>
+
+<ul>
+<li> Download all the files from <a href="https://github.com/pakhandi/Bit-Castle---Game/archive/V-2.2.5.zip">here</a>.</li>
+<li> Execute the <b>bit_castle.exe</b> file in the <b>dist</b> folder </li>
+<li> If you are working behind proxy
+    <ul>
+    <li> Open <b>dist/proxy.txt</b>
+</li>
+    <li> Delete all the contents of the file and add your proxy with the following format
+            <br>
+         <b>username:password@proxy:port</b>
+    </li>
+    </ul>
+</li>
+<li> Execute the <b>bitcastle.exe</b> file in the <b>dist</b> folder </li>
+</ul>
+
+<p><a name="technologyused"><h3>
+<a id="6-technology-used" class="anchor" href="#6-technology-used" aria-hidden="true"><span class="octicon octicon-link"></span></a>6. Technology Used</h3></a></p>
+
+<ul>
+<li>The game is made in Python-2.7.9</li>
+<li>Pygame and Tkinter libraries</li>
+<li>Executables were made using <b>py2exe</b>
+</li>
+</ul>
+
+<p><a name="testing"><h3>
+<a id="7-testing" class="anchor" href="#7-testing" aria-hidden="true"><span class="octicon octicon-link"></span></a>7. Testing</h3></a>
+The program has been tested on Windows-8.1(64-bit) and Windows-8.0(64-bit)..</p>
+
+<p><a name="working"><h3>
+<a id="8-working" class="anchor" href="#8-working" aria-hidden="true"><span class="octicon octicon-link"></span></a>8. Working</h3></a>
+<a href="http://youtu.be/DigNsQLW4J8">GamePlay - Video</a><br>
+When the Torch is ON : <br><br>
+<img src="https://raw.githubusercontent.com/pakhandi/Bit-Castle---Game/master/dist/bitcastle_tut1.JPG">
+<br>
+<br>
+When the Torch is OFF : <br><br>
+<img src="https://raw.githubusercontent.com/pakhandi/Bit-Castle---Game/master/dist/bitcastle_tut2.JPG">
+<br>
+<br>
+The working of the application is explained <a href="http://bugecode.com/post.php?pid=116">here</a>.
+<br></p>
+
+<p>For Hugs &amp; Bugs, drop a mail at <b><a href="mailto:asimkprasad@gmail.com">asimkprasad@gmail.com</a></b></p>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="owner">
+      <p><a href="https://github.com/pakhandi" class="avatar"><img src="https://avatars2.githubusercontent.com/u/7396256?v=3&amp;s=60" width="48" height="48"></a> <a href="https://github.com/pakhandi">pakhandi</a> maintains <a href="https://github.com/pakhandi/Bit-Castle---Game">Bit-castle---game</a></p>
+
+
+      </div>
+      <div class="creds">
+        <small>This page generated using <a href="https://pages.github.com/">GitHub Pages</a><br>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
+      </div>
+    </footer>
+  </div>
+  <div class="current-section">
+    <a href="#top">Scroll to top</a>
+    <a href="https://github.com/pakhandi/Bit-Castle---Game/tarball/master" class="tar">tar</a><a href="https://github.com/pakhandi/Bit-Castle---Game/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
+    <p class="name"></p>
+  </div>
+
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-56207835-4");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+</body>
+</html>
